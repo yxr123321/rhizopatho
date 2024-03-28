@@ -1,0 +1,7 @@
+source("zi.pi.R")
+source("network_analysis.R")
+source("network_stat.R")
+load("CK.RData")
+CK1 <- network_analysis(CK,3,10,0.8,"spearman",F)
+temp1 <- as.data.frame(CK1[1])
+write.table(temp1,file = "temp1.txt",sep = "\t")
